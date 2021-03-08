@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
 		
 		@user = user	
 
-		@url = 'site.fr'
+		@url = 'https://gatinos.herokuapp.com/'
 
 		mail(to : @user.email, subject: 'Bienvenue !')
 
