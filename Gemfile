@@ -64,3 +64,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # chenda 
 gem "table_print"
 gem "devise"
+
+gem "faker"
