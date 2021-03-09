@@ -75,3 +75,81 @@ a:hover
 	height: 200px;
 }
 
+#pageCart
+{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#cart
+{
+	width: 50%;
+	height: 40%;
+	/*border: 1px solid black;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+	bottom: 70px;
+}
+
+#row1
+{
+	width: 100%;
+	height: 10%;
+	/*border: 1px solid black;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.each
+{
+	width: 100%;
+	height: 50px;
+	border:1px solid black;
+	margin-top: : 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 5px;
+}
+
+.icon
+{
+	height: 50px;
+	width: 50px;
+	border-radius: 5px 0px 0px 5px;
+	position: relative;
+	right: 2px;
+}
+
+.un
+{
+	text-align: center;
+}
+
+.bouton
+{
+	border: none;
+	width: 150px;
+	height: 50px;
+	/*border: 1px solid black;*/
+	background-color: #7ae582;
+	border-radius: 50px;
+	/*position: relative;
+	left: 320px;*/
+}
+
+.delete
+{
+	width: 135px;
+	height: 100%;
+	border: none;
+	background-color: #ee6055;
+	border-radius: 50px 10px 10px 50px;
+}
