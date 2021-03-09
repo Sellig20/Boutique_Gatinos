@@ -7,4 +7,7 @@ class Item < ApplicationRecord
 
   has_many :bills
   has_many :carts, through: :bills
+
+  has_many :flows
+  has_many :orders, through: :flows
 end
