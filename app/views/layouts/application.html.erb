@@ -14,7 +14,23 @@
       <link rel="shortcut icon" type="image/x-icon" href="chain.ico" />
   </head>
 
+  <header>
+    <div id="nav">
+      <%= link_to "ACCUEIL", root_path, class:"links" %>
+      <%= link_to "PHOTOS", root_path, class:"links" %>
+      <h1><%= link_to "GATINOS", root_path, class:"links" %></h1>
+      <%= link_to "PANIER", "#", class:"links" %>
+      <% if user_signed_in? %>
+     <%= link_to "DECONNEXION", destroy_user_session_path, "data-method": :delete, class:"links" %>
+      <% else %>
+      <%= link_to "INSCRIPTION", "/users/sign_up", class:"links" %>
+      <% end %>
+
+    </div>
+  </header>
+
   <body>
     <%= yield %>
+
   </body>
 </html>

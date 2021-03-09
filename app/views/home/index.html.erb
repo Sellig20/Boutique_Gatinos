@@ -1,2 +1,24 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+
+
+<h1 id="titre">Gatinos, la référence des photos de chats !</h1>
+<div id="pageIndex">
+
+
+
+	<% @item.each do |item| %>
+		<div class="carte">
+			<a href="#"><img class="images"src="<%= item.image_url%>"></a>
+			<a href="#"><h3><%= item.title %></h3></a>
+			<p><%= item.description %></p>
+		</div>
+	<%end%>
+</div>	
+<div id="test"></div>
+</body>
+</html>

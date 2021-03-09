@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 20.times do |item|
-  Item.create(title: Faker::FunnyName.two_word_name, description: Faker::Lorem.paragraph_by_chars(number: rand(6..500)), price: rand(1..100), image_url: Faker::LoremFlickr.image(size: "50x60", search_terms: ['kitten']))
+  Item.create(title: Faker::FunnyName.two_word_name, description: Faker::Lorem.paragraph_by_chars(number: rand(6..500)), price: rand(1..100), image_url: "http://placekitten.com/g/300/200")
 end
