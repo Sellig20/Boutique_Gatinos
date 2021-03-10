@@ -15,7 +15,7 @@
 					<p class="each"><img class="icon"src="<%= item.image_url%>">
 						<%= item.title %>
 						<span><%= item.price %>€</span>
-						<button class="delete">X delete item</button>
+						<%= button_to "Supprimer l'article", bill_path(item.id), :method =>:delete %>
 					</p>
 						<% total = total + item.price %>
 				<% end %>

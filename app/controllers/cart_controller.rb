@@ -1,5 +1,5 @@
 class CartController < ApplicationController
-  before_action :authenticate_user
+  before_action :authenticate_user!
 
   def show
     @cart = Cart.find(params[:id])
@@ -10,7 +10,8 @@ class CartController < ApplicationController
     @cart = Cart.find(params[:id])
 
     @cart.bills.find_by(params[:item_id]).destroy
-
+  end
+  
   private
 
   def authenticate_user
@@ -21,7 +22,6 @@ class CartController < ApplicationController
   end
 
 
-end
 end
 
 
