@@ -1,0 +1,4 @@
+document.getElementById("item<%= @stock %>").remove();
+document.getElementById("button<%= @stock %>").remove();
+document.getElementById("total").removeChild(document.getElementById("total-price"));
+document.getElementById("total").insertAdjacentHTML("beforeend", "<%= j render 'total-price', total:@total %>");

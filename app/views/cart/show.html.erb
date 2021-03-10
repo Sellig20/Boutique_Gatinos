@@ -12,15 +12,15 @@
 				</p>
 					<% total = 0 %>
 				<% @cart.items.each do |item| %>
-					<p class="each"><img class="icon"src="<%= item.image_url%>">
+					<p class="each" id="item<%= item.id %>"><img class="icon"src="<%= item.image_url%>">
 						<%= item.title %>
 						<span><%= item.price %>€</span>
-						<%= button_to "Supprimer l'article", bill_path(item.id), :method =>:delete %>
+						<%= button_to "Supprimer l'article", bill_path(item.id), :method =>:delete, id: "button#{item.id}", remote: true %>
 					</p>
 						<% total = total + item.price %>
 				<% end %>
 						<div id="total">
-							<p>total : <%= total %>€</p>	
+							<p id="total-price">total : <%= total %>€</p>	
 						</div>
 					<%= button_to "Valider le panier !", cart_path(@cart.id), :method =>:delete %>
 
