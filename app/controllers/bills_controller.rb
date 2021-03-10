@@ -11,8 +11,24 @@ class BillsController < ApplicationController
 
   def destroy
     @bill = Bill.where(cart_id: current_user.cart.id, item_id: params[:id])
+    @stock = params[:id]
     @bill.destroy_all
-    redirect_to cart_path(current_user.cart.id), :succes => "Ajouté au panier !"
+    @total = sum(current_user)
+
+    respond_to do |format|
+      format.html { redirect_to cart_path(current_user.cart.id) }
+      format.js {}
+    end
+  end
+
+  private
+
+  def sum (user)
+    result = 0
+    user.cart.items.each do |item|
+      result = result + item.price
+    end
+    return result
   end
 end
 
