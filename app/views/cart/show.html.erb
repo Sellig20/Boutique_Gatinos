@@ -22,10 +22,10 @@
 						<div id="total">
 							<p>total : <%= total %>€</p>	
 						</div>
-					<button class="bouton">
-						valider le panier
-					</button>
 
+					<% if total >= 1 %>
+					<%= button_to "Passer commande (NEXT GEN)", checkout_create_path(total: total), remote: true %>
+					<% end %>
 			</div>
 	</div>
 
