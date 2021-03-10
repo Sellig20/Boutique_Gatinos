@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   devise_for :users
   resources :cart, only: [:show, :update, :destroy, :edit]
   resources :bills, only: [:destroy, :create]
-  resources :items, only: [:show, :update, :destroy, :edit]
+  resources :item, only: [:show, :update, :destroy, :edit]
 end
