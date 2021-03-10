@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   resources :order, only: [:new, :create]
   resources :cart, only: [:show, :update, :destroy, :edit]
   resources :bills, only: [:destroy, :create]
-<<<<<<< HEAD
-  resources :items, only: [:show, :update, :destroy, :edit]
+
+
 
 
   scope '/checkout' do
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 end
 
 
-=======
+
   resources :item, only: [:show, :update, :destroy, :edit]
->>>>>>> master
+
 end
