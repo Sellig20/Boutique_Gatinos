@@ -17,6 +17,9 @@
 			<a href="#"><h3><%= item.title %></h3></a>
 			<p><%= item.description %></p>
 		</div>
+    <% if !current_user.cart.items.find(item.id)? %>
+      <% button_to "Ajouter au panier", bills_path , :item_id => item.id, action: "create", method: "post" %>
+    <% end %> 
 	<%end%>
 </div>	
 <div id="test"></div>
