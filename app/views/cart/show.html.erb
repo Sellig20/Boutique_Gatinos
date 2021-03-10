@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cart</title>
+</head>
+<body>
+
+	<div id="pageCart">
+			<div id="cart">
+				<p id="row1">
+					<%= @user %>
+				</p>
+					<% total = 0 %>
+				<% @cart.items.each do |item| %>
+					<p class="each"><img class="icon"src="<%= item.image_url%>">
+						<%= item.title %>
+						<span><%= item.price %>€</span>
+						<button class="delete">X delete item</button>
+					</p>
+						<% total = total + item.price %>
+				<% end %>
+						<div id="total">
+							<p>total : <%= total %>€</p>	
+						</div>
+					<button class="bouton">
+						valider le panier
+					</button>
+
+			</div>
+	</div>
+
+</body>
+</html>

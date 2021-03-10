@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   devise_for :users
   resources :carts, only: [:show, :update, :destroy, :edit]
   resources :bills, only: [:destroy, :create]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :items, only: [:show, :update, :destroy, :edit]
 end
