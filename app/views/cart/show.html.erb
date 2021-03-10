@@ -22,9 +22,7 @@
 						<div id="total">
 							<p>total : <%= total %>€</p>	
 						</div>
-					<button class="bouton">
-						valider le panier
-					</button>
+					<%= button_to "Valider le panier !", cart_path(@cart.id), :method =>:delete %>
 
 			</div>
 	</div>
