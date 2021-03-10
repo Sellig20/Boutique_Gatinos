@@ -8,8 +8,18 @@ class CartController < ApplicationController
 
   def update
     @cart = Cart.find(params[:id])
+  end
 
-    @cart.bills.find_by(params[:item_id]).destroy
+  def destroy
+    @cart = Cart.find(params[:id])
+    @order = Order.create(user_id: current_user.id)
+    @cart.items.each do |item|
+      Flow.create(order_id: @order.id, item_id: item.id)
+    end
+
+    @cart.items.destroy_all
+    redirect_to root_path, :info => "Merci pour votre commande, vous allez bientôt recevoir un email !"
+
   end
   
   private

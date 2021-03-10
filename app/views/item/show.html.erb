@@ -2,5 +2,5 @@
 <img class="image_solo"src="<%= @item.image_url%>"></a>
   <p><h2><%= @item.title%></h2></p>
   <p><h3><%= @item.description%></h3></p>
-<button type="button" class="btn btn-warning"><%= link_to 'Ajouter au panier', cart_path %></button>
+<%= button_to "Ajouter au panier", bills_path, action: "create" ,method: :post, params: {item_id: @item.id} %>
 </div>

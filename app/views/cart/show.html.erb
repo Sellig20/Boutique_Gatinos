@@ -23,6 +23,9 @@
 							<p>total : <%= total %>€</p>	
 						</div>
 
+					<%= button_to "Valider le panier !", cart_path(@cart.id), :method =>:delete %>
+
+
 					<% if total >= 1 %>
 					<%= button_to "Passer commande (NEXT GEN)", checkout_create_path(total: total), remote: true %>
 					<% end %>
