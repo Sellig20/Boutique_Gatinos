@@ -4,7 +4,7 @@
 
 <p>voici ce que tu as commandé.e</p>
 
-	<%= @cart.item.each do |item| %>
+	<%= @user.orders.last.items.each do |item| %>
 		<div>
 			<img src="<% item.image_url %>">
 			<p><%= item.title %></p>
