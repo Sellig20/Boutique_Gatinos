@@ -13,7 +13,7 @@ Here some informations you may want to know :
 We conceived an e.commerce which sell pictures of adorables and grumpiiiies cats. Create an account, registrate, select the cat you want to put on your wall, pay online and you will receive an email of confirmation ! 🐱🐈♥️
 
 ## Here are the features :
-* As a customer, you can :
+As a customer, you can :
 - create an account 
 - log in your account
 - log out
@@ -22,7 +22,7 @@ We conceived an e.commerce which sell pictures of adorables and grumpiiiies cats
 - delete that horrible cat you finaly don't want (to choose the grympy one, I see u & agree, good choice)
 - confirm that cart and pay online
 - receive tha famous e-mail of confirmation
-* As a visitor you can :
+As a visitor you can :
 - stalk our cats' pictures
 - and that's all. Registrate and buy one !
 
@@ -44,10 +44,10 @@ you have to git clone the url adress just given in the green button "Code".
 - run `rails server` and go to the local host ! 
 
 # Who are we ?
-Gustave -> https://github.com/VilgotPloix
-Chenda -> https://github.com/chendanet
-Emmanuel -> https://github.com/EmmanuelQuere
-Antoine -> https://github.com/MajesticForReal
-and me !
+- Gustave -> https://github.com/VilgotPloix
+- Chenda -> https://github.com/chendanet
+- Emmanuel -> https://github.com/EmmanuelQuere
+- Antoine -> https://github.com/MajesticForReal
+- and me !
 
 Love u all ! and love grumpy cat.
