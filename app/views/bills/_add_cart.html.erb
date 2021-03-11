@@ -1,0 +1,5 @@
+<% if current_user.cart.items.count > 0 %>
+  <%= link_to "PANIER (#{current_user.cart.items.count})", cart_path(current_user.cart.id),id:"panier_nav", class:"links" %>
+<% else %>  
+  <%= link_to "PANIER", cart_path(current_user.cart.id),id:"panier_nav", class:"links" %>
+<% end %>

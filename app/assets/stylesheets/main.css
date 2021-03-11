@@ -40,12 +40,13 @@
 	margin: 15px;
 	overflow: hidden;
 	text-align: center;
+	border-radius: 20px;
 }
 
 .images
 {
 	width: 100%;
-	
+	height: 40%;
 }
 
 #titre
@@ -73,6 +74,9 @@ a:hover
 {
 	width: 100%;
 	height: 200px;
+	border: 1px solid black;
+	position: absolute;
+	bottom: 0px;
 }
 
 #pageCart
@@ -152,4 +156,15 @@ a:hover
 	border: none;
 	background-color: #ee6055;
 	border-radius: 50px 10px 10px 50px;
+}
+
+.text
+{
+	height: 25%;
+	overflow: hidden;
+}
+
+.ca
+{
+	margin: 1px;
 }

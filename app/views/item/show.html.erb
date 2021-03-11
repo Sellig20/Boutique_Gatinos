@@ -1,6 +1,18 @@
 <div class="container">
-<img class="image_solo"src="<%= @item.image_url%>"></a>
+
+	<%if @item.picture.attached?%>
+		<%= image_tag @item.picture, alt: 'avatar' %>
+	<% else %>
+		<img src="<%= @item.image_url %>">
+	<%end%>
+
   <p><h2><%= @item.title%></h2></p>
   <p><h3><%= @item.description%></h3></p>
-<%= button_to "Ajouter au panier", bills_path, action: "create" ,method: :post, params: {item_id: @item.id} %>
+<%= button_to "Ajouter au panier", bills_path, action: "create" ,method: :post,remote: true, params: {item_id: @item.id} %>
 </div>
+
+<h3>Changer d'image ?</h3>
+<%= form_tag item_picture_index_path(@item), multipart: true do %>
+  <%= file_field_tag :picture %>
+  <%= submit_tag "mettre à jour" %>
+<% end %>

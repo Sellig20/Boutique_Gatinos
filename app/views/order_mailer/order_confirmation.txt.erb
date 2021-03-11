@@ -1,0 +1,11 @@
+Merci pour ta commande !!!
+
+Elle devrait arriver sous peu !
+
+voici ce que tu as commandé :
+
+<%= @cart.item.each do |item| %>
+	<%= item.title %>
+	<%end%>
+
+tu peux revenir sur <%= link_to "notre super site", "https://gatinos.herokuapp.com/" %>

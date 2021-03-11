@@ -19,6 +19,8 @@ end
 
 
 
-  resources :item, only: [:show, :update, :destroy, :edit]
+  resources :item, only: [:show, :update, :destroy, :edit] do
+    resources :picture, only: [:create]
+  end
 
 end

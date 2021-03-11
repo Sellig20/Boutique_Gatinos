@@ -35,13 +35,13 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-# chenda 
+
 gem "table_print"
 gem "devise"
 gem 'dotenv'
 gem 'dotenv-rails'
 gem 'stripe'
 gem 'activeadmin'
-
+gem "aws-sdk-s3", require: false
 gem "faker"
 
