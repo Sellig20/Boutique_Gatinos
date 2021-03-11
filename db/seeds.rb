@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 20.times do |item|
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+
 
   Item.create(title: Faker::FunnyName.two_word_name, description: Faker::Lorem.paragraph_by_chars(number: rand(6..100)), price: rand(1..100), image_url: "http://placekitten.com/g/300/200")
 end
