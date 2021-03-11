@@ -1,23 +1,23 @@
-class OrderMailer < ApplicationMailer
+ class OrderMailer < ApplicationMailer
 
-	default from: 'gustavevilgot@gmail.com'
+# 	default from: 'gustavevilgot@gmail.com'
 	
-	def user_confirmation(user)
+# 	def user_confirmation(user)
 		
-		@user = user
-		# @order = order
+# 		@user = user
+# 		# @order = order
 		
-  #   	@user = User.find_by(order.user_id)
-  #   	@cart = Cart.find_by(user_id: @user.id)
+#   #   	@user = User.find_by(order.user_id)
+#   #   	@cart = Cart.find_by(user_id: @user.id)
 
-		# @user = current_user
+# 		# @user = current_user
 
-		# @cart = Cart.find_by(user_id: @user.id)
+# 		# @cart = Cart.find_by(user_id: @user.id)
 
-		@url = 'https://gatinos.herokuapp.com/'
+# 		@url = 'https://gatinos.herokuapp.com/'
 
-		mail(to: @user.email, subject: 'Confirmation de commande.')
+# 		mail(to: @user.email, subject: 'Confirmation de commande.')
 
-	end
+# 	end
 
-end
+ end
