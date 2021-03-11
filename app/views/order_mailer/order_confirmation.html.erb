@@ -6,7 +6,7 @@
 
 	<%= @user.orders.last.items.each do |item| %>
 		<div>
-			<img src="<% item.image_url %>">
+			<%= image_tag item.picture, alt: 'avatar', class:"images" %>
 			<p><%= item.title %></p>
 		</div>
 	<%end%>
