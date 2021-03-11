@@ -8,7 +8,7 @@
 
   <p><h2><%= @item.title%></h2></p>
   <p><h3><%= @item.description%></h3></p>
-<%= button_to "Ajouter au panier", bills_path, action: "create" ,method: :post, params: {item_id: @item.id} %>
+<%= button_to "Ajouter au panier", bills_path, action: "create" ,method: :post,remote: true, params: {item_id: @item.id} %>
 </div>
 
 <h3>Changer d'image ?</h3>

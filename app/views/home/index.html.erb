@@ -23,7 +23,7 @@
 			<a href="#"><h3><%= item.title %></h3></a>
 			<p><%= item.description %></p>
 			<button type="button" class="btn btn-warning"><%= link_to "Voir détail", item_path(item.id) %></button> 
-      <%= button_to "Ajouter au panier", bills_path, action: "create" ,method: :post, params: {item_id: item.id} %>
+      <%= button_to "Ajouter au panier", bills_path, action: "create" ,method: :post, params: {item_id: item.id}, remote: true %>
     </div>
 	<%end%>
 </div>	

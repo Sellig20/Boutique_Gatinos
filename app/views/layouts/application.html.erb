@@ -21,12 +21,15 @@
       <%= link_to "PHOTOS", root_path, class:"links" %>
       <h1><%= link_to "GATINOS", root_path, class:"links" %></h1>
       <% if user_signed_in? %>
-      <%= link_to "PANIER", cart_path(current_user.cart.id), class:"links" %>
-      
-     <%= link_to "DECONNEXION", destroy_user_session_path, "data-method": :delete, class:"links" %>
+        <% if current_user.cart.items.count > 0 %>
+          <%= link_to "PANIER (#{current_user.cart.items.count})", cart_path(current_user.cart.id),id:"panier_nav", class:"links" %>
+        <% else %>  
+          <%= link_to "PANIER", cart_path(current_user.cart.id),id:"panier_nav", class:"links" %>
+        <% end %>
+       <%= link_to "DECONNEXION", destroy_user_session_path, id:"delog", "data-method": :delete, class:"links" %>
       <% else %>
-      <%= link_to "CONNEXION", "/users/sign_in", class:"links" %>
-      <%= link_to "INSCRIPTION", "/users/sign_up", class:"links" %>
+        <%= link_to "CONNEXION", "/users/sign_in", class:"links" %>
+        <%= link_to "INSCRIPTION", "/users/sign_up", class:"links" %>
       <% end %>
 
     </div>

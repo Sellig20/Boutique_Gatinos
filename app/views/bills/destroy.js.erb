@@ -2,3 +2,5 @@ document.getElementById("item<%= @stock %>").remove();
 document.getElementById("button<%= @stock %>").remove();
 document.getElementById("total").removeChild(document.getElementById("total-price"));
 document.getElementById("total").insertAdjacentHTML("beforeend", "<%= j render 'total-price', total:@total %>");
+document.getElementById("nav").removeChild(document.getElementById("panier_nav"));
+document.getElementById("delog").insertAdjacentHTML("beforebegin", "<%= j render 'add_cart' %>");
