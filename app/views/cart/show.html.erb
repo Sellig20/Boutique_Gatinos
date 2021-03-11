@@ -12,24 +12,33 @@
 				</p>
 					<% total = 0 %>
 				<% @cart.items.each do |item| %>
-					<p class="each" id="item<%= item.id %>"><img class="icon"src="<%= item.image_url%>">
+					<p class="each" id="item<%= item.id %>">
+						<%if item.picture.attached?%>
+							<%= image_tag item.picture, alt: 'avatar', class:"icon" %>
+							<% puts "salut" %>
+						<% else %>
+								<img class="icon" src="<%= item.image_url %>">
+								<% puts"bonjour " +  "#{item.id}" %>
+						<%end%>
 						<%= item.title %>
 						<span><%= item.price %>€</span>
-						<%= button_to "Supprimer l'article", bill_path(item.id), :method =>:delete, id: "button#{item.id}", remote: true %>
+						<%= button_to "Supprimer l'article", bill_path(item.id), :method =>:delete, id: "button#{item.id}", remote: true, class:"deux" %>
 					</p>
 						<% total = total + item.price %>
 				<% end %>
-						<div id="total">
-							<p id="total-price">total : <%= total %>€</p>	
-						</div>
+						
 
 					
 
 
-					<% if total >= 1 %>
-					<%= button_to "Passer commande (NEXT GEN)", checkout_create_path(total: total), remote: true  %>
-					<% end %>
+					
 			</div>
+			<div id="total">
+							<p id="total-price">total : <%= total %>€</p>	
+						</div>
+					<% if total >= 1 %>
+						<%= button_to "Passer commande", checkout_create_path(total: total), remote: true, class:"un"  %>
+					<% end %>
 	</div>
 
 </body>
