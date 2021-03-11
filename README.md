@@ -30,7 +30,7 @@ As a visitor you can :
 ## How to run the app
 Please you will find the following commands to run the app :
 
-Click on this link to find our deploy,ent on heroku : https://gatinos.herokuapp.com
+Click on this link to find our deployment on heroku : https://gatinos.herokuapp.com
 
 Or, if you want to run this on http://localhost:3000 :
 
