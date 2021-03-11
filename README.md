@@ -1,4 +1,4 @@
-#🔆 Hi everyone !
+# 🔆 Hi everyone !
 Welcome in our app Gatinos - The E.Shop of cats' pictures.
 
 Here some informations you may want to know :
