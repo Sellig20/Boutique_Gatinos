@@ -1,27 +1,13 @@
-# README
+#🔆 Hi everyone !#
+##Welcome in our app Gatinos - The E.Shop of cats' pictures.##
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###Here some informations you may want to know :###
 
-coucou les loulouennnns
+* Ruby version : `2.7.1`
+* Rails version : `5.2.3`
+* We use Javascript
+* HTML and CSS only for the front end part.
 
-Things you may want to cover:
+###What is it about###
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-Voici la premiere modif :)
+###How to run the app###
