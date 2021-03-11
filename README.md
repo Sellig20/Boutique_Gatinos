@@ -19,7 +19,7 @@ As a customer, you can :
 - log out
 - browse every items on the website
 - select one or as many as you want and put them in a personnal cart
-- delete that horrible cat you finaly don't want (to choose the grympy one, I see u & agree, good choice)
+- delete that horrible cat you finally don't want (to choose the grympy one, I see u & agree, good choice)
 - confirm that cart and pay online
 - receive tha famous e-mail of confirmation
 
