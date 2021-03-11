@@ -3,7 +3,10 @@ class BillsController < ApplicationController
     @bill = Bill.new(cart_id: current_user.cart.id, item_id: params[:item_id])
 
     if @bill.save == true
-      redirect_to root_path, :succes => "Ajouté au panier !"
+      respond_to do |format|
+        format.html {redirect_to root_path, :succes => "Ajouté au panier !"}
+        format.js { }
+      end
     else
       redirect_to root_path, :warning => "Erreur !"
     end
