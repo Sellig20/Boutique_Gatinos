@@ -22,6 +22,7 @@ As a customer, you can :
 - delete that horrible cat you finaly don't want (to choose the grympy one, I see u & agree, good choice)
 - confirm that cart and pay online
 - receive tha famous e-mail of confirmation
+
 As a visitor you can :
 - stalk our cats' pictures
 - and that's all. Registrate and buy one !
