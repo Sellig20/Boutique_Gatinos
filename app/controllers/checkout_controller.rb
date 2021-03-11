@@ -29,14 +29,14 @@ class CheckoutController < ApplicationController
     @payment_intent = Stripe::PaymentIntent.retrieve(@session.payment_intent)
 
 
-    @cart = Cart.find_by(user_id: current_user.id)
-    @order = Order.create(user_id: current_user.id)
-    @cart.items.each do |item|
-      Flow.create(order_id: @order.id, item_id: item.id)
-    end
+    # @cart = Cart.find_by(user_id: current_user.id)
+    # @order = Order.create(user_id: current_user.id)
+    # @cart.items.each do |item|
+    #   Flow.create(order_id: @order.id, item_id: item.id)
+    # end
 
-    @cart.items.destroy_all
-    redirect_to root_path, :info => "Merci pour votre commande, vous allez bientôt recevoir un email !"
+    # @cart.items.destroy_all
+    # redirect_to root_path, :info => "Merci pour votre commande, vous allez bientôt recevoir un email !"
 
   end
 
