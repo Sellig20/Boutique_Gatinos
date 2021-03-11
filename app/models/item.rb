@@ -10,4 +10,5 @@ class Item < ApplicationRecord
 
   has_many :flows
   has_many :orders, through: :flows
+  has_one_attached :picture
 end

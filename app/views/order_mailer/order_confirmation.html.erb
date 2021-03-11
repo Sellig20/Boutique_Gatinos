@@ -1,0 +1,14 @@
+<h1>Merci pour ta commande !</h1>
+
+<h2>Elle devrait arriver sous peu.</h2>
+
+<p>voici ce que tu as commandé.e</p>
+
+	<%= @cart.item.each do |item| %>
+		<div>
+			<img src="<% item.image_url %>">
+			<p><%= item.title %></p>
+		</div>
+	<%end%>
+
+<p>tu peux retourner sur <a href="https://gatinos.herokuapp.com/">notre page d'accueil !</a></p>
