@@ -41,7 +41,7 @@ gem "devise"
 gem 'dotenv'
 gem 'dotenv-rails'
 gem 'stripe'
-
+gem 'activeadmin'
 
 gem "faker"
 

@@ -9,3 +9,5 @@
 20.times do |item|
   Item.create(title: Faker::FunnyName.two_word_name, description: Faker::Lorem.paragraph_by_chars(number: rand(6..500)), price: rand(1..100), image_url: "http://placekitten.com/g/300/200")
 end
+
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

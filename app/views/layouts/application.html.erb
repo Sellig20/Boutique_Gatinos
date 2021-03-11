@@ -22,7 +22,8 @@
       <h1><%= link_to "GATINOS", root_path, class:"links" %></h1>
       <% if user_signed_in? %>
       <%= link_to "PANIER", cart_path(current_user.cart.id), class:"links" %>
-      
+    <%="(Admin)" if current_user.admin? %> Profile: <%= current_user.email%>
+
      <%= link_to "DECONNEXION", destroy_user_session_path, "data-method": :delete, class:"links" %>
       <% else %>
       <%= link_to "CONNEXION", "/users/sign_in", class:"links" %>
