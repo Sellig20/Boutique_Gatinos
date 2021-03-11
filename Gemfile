@@ -41,6 +41,7 @@ gem "devise"
 gem 'dotenv'
 gem 'dotenv-rails'
 gem 'stripe'
+gem "aws-sdk-s3", require: false
 
 
 gem "faker"

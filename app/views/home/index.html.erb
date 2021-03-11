@@ -15,18 +15,20 @@
 		<div class="carte">
 
 			<%if item.picture.attached?%>
-				<%= image_tag item.picture, alt: 'avatar' %>
+				<%= image_tag item.picture, alt: 'avatar', class:"images" %>
 			<% else %>
-				<img src="<%= item.image_url %>">
+				<img class="images" src="<%= item.image_url %>">
 			<%end%>
 
 			<a href="#"><h3><%= item.title %></h3></a>
-			<p><%= item.description %></p>
-			<button type="button" class="btn btn-warning"><%= link_to "Voir détail", item_path(item.id) %></button> 
-      <%= button_to "Ajouter au panier", bills_path, action: "create" ,method: :post, params: {item_id: item.id} %>
+			<p class="text"><%= item.description %></p>
+			<div class="foot">
+				<button type="button" class="btn btn-warning"><%= link_to "Voir détail", item_path(item.id) %></button> 
+      				<%= button_to "Ajouter au panier", bills_path, action: "create" ,method: :post, params: {item_id: item.id}, class:"btn btn-success ca" %>
+			</div>
     </div>
 	<%end%>
 </div>	
-<div id="test"></div>
+
 </body>
 </html>
