@@ -1,5 +1,11 @@
 <div class="container">
-  <%= image_tag @item.picture, alt: 'avatar' %>
+
+	<%if @item.picture.attached?%>
+		<%= image_tag @item.picture, alt: 'avatar' %>
+	<% else %>
+		<img src="<%= @item.image_url %>">
+	<%end%>
+
   <p><h2><%= @item.title%></h2></p>
   <p><h3><%= @item.description%></h3></p>
 <%= button_to "Ajouter au panier", bills_path, action: "create" ,method: :post, params: {item_id: @item.id} %>

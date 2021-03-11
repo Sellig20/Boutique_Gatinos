@@ -13,7 +13,13 @@
 
 	<% @item.each do |item| %>
 		<div class="carte">
-			<a href="#"><img class="images"src="<%= item.picture%>"></a>
+
+			<%if item.picture.attached?%>
+				<%= image_tag item.picture, alt: 'avatar' %>
+			<% else %>
+				<img src="<%= item.image_url %>">
+			<%end%>
+
 			<a href="#"><h3><%= item.title %></h3></a>
 			<p><%= item.description %></p>
 			<button type="button" class="btn btn-warning"><%= link_to "Voir détail", item_path(item.id) %></button> 
